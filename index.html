@@ -130,12 +130,10 @@
     const WA_NUMBER='966576725097';
     const PHONE='+966576725097';
     const WORK_START=9, WORK_END=23;
-    function openWA(message){window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`,'_blank','noopener,noreferrer')}
+    function openWA(message){window.location.href=`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`}
     function orderService(service){openWA(`مرحباً أبو محمد، أرغب في طلب خدمة: ${service}. أرجو توضيح المتطلبات والرسوم والمدة المتوقعة.`)}
     function openCustomService(){const service=prompt('اكتب اسم الخدمة التي تبحث عنها:');if(service&&service.trim()){orderService(service.trim())}}
-    function sendForm(e){e.preventDefault();const n=document.getElementById('name').value.trim();const t=document.getElementById('type').value;const d=document.getElementById('details').value.trim();openWA(`مرحباً أبو محمد، لدي ${t}.
-${n?'الاسم: '+n+'
-':''}التفاصيل: ${d}`)}
+    function sendForm(e){e.preventDefault();const n=document.getElementById('name').value.trim();const t=document.getElementById('type').value;const d=document.getElementById('details').value.trim();const nameLine=n?`الاسم: ${n}\n`:'';openWA(`مرحباً أبو محمد، لدي ${t}.\n${nameLine}التفاصيل: ${d}`)}
     function filterCards(){const q=document.getElementById('search').value.trim().toLowerCase();const c=document.getElementById('category').value;let visible=0;document.querySelectorAll('.service-card').forEach(x=>{const matchText=x.dataset.name.toLowerCase().includes(q);const matchCat=c==='all'||x.dataset.cat===c||x.dataset.cat==='all';x.style.display=matchText&&matchCat?'flex':'none';if(matchText&&matchCat)visible++});document.getElementById('empty').classList.toggle('hidden',visible>0)}
     const h=new Date().getHours(), open=h>=WORK_START&&h<WORK_END;document.getElementById('statusText').textContent=open?'متاح الآن لاستقبال الطلبات':'خارج وقت الدوام، أرسل طلبك وسنراجعه لاحقاً';if(!open){document.getElementById('statusDot').style.background='#f59e0b';document.getElementById('statusDot').style.animation='none'}
     document.getElementById('greeting').textContent=h<12?'صباح الخير ☀️':h<18?'حياك الله 👋':'مساء الخير 🌙';document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('callBtn').href='tel:'+PHONE;
