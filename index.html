@@ -5,139 +5,2600 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#081a33">
   <meta name="description" content="مكتب أبو محمد للخدمات الرقمية، متابعة واضحة للخدمات الإلكترونية للأفراد والمنشآت.">
+
   <meta property="og:title" content="مكتب أبو محمد للخدمات الرقمية">
   <meta property="og:description" content="اختر خدمتك وأرسل طلباً منظماً عبر واتساب.">
   <meta property="og:type" content="website">
+
   <title>مكتب أبو محمد للخدمات الرقمية</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Tajawal','sans-serif']},colors:{navy:'#081a33',sky:'#0ea5e9',gold:'#fbbf24',wa:'#25D366'}}}}</script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Tajawal', 'sans-serif']
+          },
+          colors: {
+            navy: '#081a33',
+            sky: '#0ea5e9',
+            gold: '#fbbf24',
+            wa: '#25D366'
+          }
+        }
+      }
+    }
+  </script>
+
   <style>
-    :root{color-scheme:light}*{scroll-behavior:smooth}body{font-family:'Tajawal',sans-serif;background:#f8fafc;padding-bottom:76px}
-    .hero{background:radial-gradient(circle at 12% 18%,rgba(14,165,233,.23),transparent 28%),radial-gradient(circle at 88% 82%,rgba(251,191,36,.16),transparent 25%),linear-gradient(135deg,#061426,#102b4e)}
-    .card{background:rgba(255,255,255,.97);border:1px solid #e5edf5;box-shadow:0 14px 35px rgba(15,23,42,.07)}
-    .service-card{transition:transform .25s,box-shadow .25s}.service-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(15,23,42,.11)}
-    .live-dot{width:9px;height:9px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.55);animation:pulse 1.8s infinite}@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}}
-    .reveal{opacity:0;transform:translateY(16px);transition:.55s}.reveal.show{opacity:1;transform:none}
-    summary::-webkit-details-marker{display:none}details[open] .chev{transform:rotate(180deg)}.chev{transition:.25s}
-    :focus-visible{outline:3px solid #38bdf8;outline-offset:3px}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-    @media(min-width:768px){body{padding-bottom:0}}
+    :root {
+      color-scheme: light;
+      --navy: #081a33;
+      --sky: #0ea5e9;
+      --gold: #fbbf24;
+      --wa: #25D366;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+
+      padding-bottom:
+        calc(
+          78px +
+          env(safe-area-inset-bottom)
+        );
+
+      overflow-x: hidden;
+    }
+
+    button,
+    a,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button,
+    a {
+      touch-action: manipulation;
+    }
+
+    button:active,
+    .tap:active {
+      transform: scale(.985);
+    }
+
+    .hero {
+      background:
+        radial-gradient(
+          circle at 10% 15%,
+          rgba(14,165,233,.23),
+          transparent 31%
+        ),
+        radial-gradient(
+          circle at 90% 90%,
+          rgba(251,191,36,.14),
+          transparent 29%
+        ),
+        linear-gradient(
+          145deg,
+          #051326,
+          #0a2342 58%,
+          #12345e
+        );
+    }
+
+    .glass {
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.14);
+      backdrop-filter: blur(12px);
+    }
+
+    .card {
+      background: rgba(255,255,255,.98);
+      border: 1px solid #e5edf5;
+      box-shadow:
+        0 10px 30px
+        rgba(15,23,42,.065);
+    }
+
+    .service-card {
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      border-radius: 50%;
+      background: #22c55e;
+
+      box-shadow:
+        0 0 0 0
+        rgba(34,197,94,.55);
+
+      animation:
+        pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      70% {
+        box-shadow:
+          0 0 0 8px
+          rgba(34,197,94,0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: .45s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] .chev {
+      transform: rotate(180deg);
+    }
+
+    .chev {
+      transition: transform .2s ease;
+    }
+
+    .mobile-action {
+      min-height: 48px;
+    }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+    }
+
+    .safe-bottom {
+      padding-bottom:
+        env(safe-area-inset-bottom);
+    }
+
+    :focus-visible {
+      outline:
+        3px solid
+        #38bdf8;
+
+      outline-offset: 3px;
+    }
+
+    /* MOBILE FIRST */
+    @media (max-width: 767px) {
+
+      .hero {
+        padding-top: 26px !important;
+        padding-bottom: 55px !important;
+        border-radius:
+          0 0 28px 28px !important;
+      }
+
+      .hero-title {
+        font-size: clamp(
+          2rem,
+          9vw,
+          2.8rem
+        ) !important;
+
+        line-height: 1.18 !important;
+      }
+
+      .hero-description {
+        font-size: .91rem;
+        line-height: 1.85;
+      }
+
+      .service-card {
+        padding: 17px !important;
+        border-radius: 18px !important;
+      }
+
+      .service-card h3 {
+        margin-top: 0 !important;
+        font-size: 1rem;
+      }
+
+      .service-card p {
+        line-height: 1.65 !important;
+      }
+
+      .mobile-service-layout {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .desktop-spacer {
+        display: none;
+      }
+
+      section {
+        scroll-margin-top: 15px;
+      }
+    }
+
+    @media (min-width: 768px) {
+
+      body {
+        padding-bottom: 0;
+      }
+
+      .service-card:hover {
+        transform:
+          translateY(-4px);
+
+        box-shadow:
+          0 18px 42px
+          rgba(15,23,42,.11);
+
+        border-color:
+          #cbd5e1;
+      }
+    }
+
+    @media (max-width: 350px) {
+
+      .hero-title {
+        font-size: 1.85rem !important;
+      }
+
+      .small-screen-hide {
+        display: none;
+      }
+    }
+
+    @media (
+      prefers-reduced-motion: reduce
+    ) {
+
+      *,
+      *:before,
+      *:after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
   </style>
 </head>
-<body class="text-slate-800 antialiased">
-  <div class="bg-navy text-white px-4 py-2 text-xs">
-    <div class="max-w-6xl mx-auto flex justify-between items-center gap-3">
-      <div class="flex items-center gap-2"><span id="statusDot" class="live-dot"></span><span id="statusText">التحقق من حالة الدوام...</span></div>
-      <span class="text-slate-300">الرسوم والمدة تُوضّح قبل البدء</span>
+
+<body class="antialiased">
+
+  <!-- STATUS BAR -->
+  <div class="bg-navy text-white px-3 py-2">
+    <div
+      class="
+        max-w-6xl
+        mx-auto
+        flex
+        justify-between
+        items-center
+        gap-2
+        text-[11px]
+        sm:text-xs
+      "
+    >
+
+      <div class="flex items-center gap-2 min-w-0">
+
+        <span
+          id="statusDot"
+          class="live-dot"
+        ></span>
+
+        <span
+          id="statusText"
+          class="truncate"
+        >
+          التحقق من حالة الدوام...
+        </span>
+
+      </div>
+
+      <span
+        class="
+          text-slate-300
+          whitespace-nowrap
+          small-screen-hide
+        "
+      >
+        التكلفة قبل البدء
+      </span>
+
     </div>
   </div>
 
-  <header class="hero text-white px-4 pt-12 pb-20 rounded-b-[3rem] relative overflow-hidden">
-    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center relative z-10">
-      <div class="text-center lg:text-right">
-        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-2 text-sm mb-5"><i class="fa-solid fa-shield-halved text-gold"></i> متابعة واضحة وخصوصية في التعامل</div>
-        <p id="greeting" class="text-gold font-bold mb-2">أهلاً بك</p>
-        <h1 class="text-4xl md:text-6xl font-black leading-tight">معاملتك أوضح،<br><span class="text-gold">وطلبك أسرع</span></h1>
-        <p class="text-slate-300 leading-8 max-w-xl mx-auto lg:mx-0 mt-5">اختر الخدمة، اعرف المطلوب، وأرسل طلباً منظماً عبر واتساب لمكتب أبو محمد.</p>
-        <div class="flex flex-wrap justify-center lg:justify-start gap-3 mt-7">
-          <button onclick="openWA('مرحباً أبو محمد، أريد الاستفسار عن خدمة رقمية.')" class="bg-wa hover:bg-green-600 px-7 py-3.5 rounded-xl font-black flex items-center gap-2 shadow-xl"><i class="fa-brands fa-whatsapp text-xl"></i>ابدأ عبر واتساب</button>
-          <a href="#services" class="bg-white/10 border border-white/20 px-7 py-3.5 rounded-xl font-bold">تصفح الخدمات</a>
+
+  <!-- HERO -->
+  <header
+    class="
+      hero
+      text-white
+      px-4
+      pt-10
+      pb-20
+      rounded-b-[3rem]
+      relative
+      overflow-hidden
+    "
+  >
+
+    <div
+      class="
+        max-w-6xl
+        mx-auto
+        grid
+        lg:grid-cols-2
+        gap-10
+        items-center
+        relative
+        z-10
+      "
+    >
+
+      <div
+        class="
+          text-center
+          lg:text-right
+        "
+      >
+
+        <div
+          class="
+            glass
+            inline-flex
+            items-center
+            gap-2
+            rounded-full
+            px-3.5
+            py-2
+            text-xs
+            sm:text-sm
+            mb-4
+          "
+        >
+
+          <i
+            class="
+              fa-solid
+              fa-shield-halved
+              text-gold
+            "
+          ></i>
+
+          متابعة واضحة وخصوصية في التعامل
+
         </div>
-        <div class="flex flex-wrap justify-center lg:justify-start gap-2 mt-5 text-xs">
-          <button onclick="orderService('تجديد الإقامة')" class="bg-white/10 border border-white/15 rounded-full px-3 py-2">تجديد إقامة</button>
-          <button onclick="orderService('نقل خدمات العمالة')" class="bg-white/10 border border-white/15 rounded-full px-3 py-2">نقل خدمات</button>
-          <button onclick="orderService('خدمات منصة قوى')" class="bg-white/10 border border-white/15 rounded-full px-3 py-2">منصة قوى</button>
-          <button onclick="orderService('التأشيرات')" class="bg-white/10 border border-white/15 rounded-full px-3 py-2">التأشيرات</button>
+
+        <p
+          id="greeting"
+          class="
+            text-gold
+            font-black
+            text-sm
+            mb-2
+          "
+        >
+          أهلاً بك
+        </p>
+
+        <h1
+          class="
+            hero-title
+            text-4xl
+            md:text-6xl
+            font-black
+            leading-tight
+          "
+        >
+          معاملتك أوضح،
+          <br>
+
+          <span class="text-gold">
+            وطلبك أسرع
+          </span>
+        </h1>
+
+        <p
+          class="
+            hero-description
+            text-slate-300
+            leading-8
+            max-w-xl
+            mx-auto
+            lg:mx-0
+            mt-4
+          "
+        >
+          اختر الخدمة،
+          اعرف المطلوب،
+          وأرسل طلباً منظماً مباشرة عبر واتساب.
+        </p>
+
+
+        <!-- MOBILE PRIMARY ACTIONS -->
+        <div
+          class="
+            grid
+            grid-cols-[1fr_auto]
+            sm:flex
+            gap-2.5
+            mt-6
+            justify-center
+            lg:justify-start
+          "
+        >
+
+          <button
+            onclick="openWA('مرحباً أبو محمد، أريد الاستفسار عن خدمة رقمية.')"
+            class="
+              mobile-action
+              bg-wa
+              hover:bg-green-600
+              px-5
+              py-3
+              rounded-xl
+              font-black
+              flex
+              items-center
+              justify-center
+              gap-2
+              shadow-xl
+            "
+          >
+
+            <i
+              class="
+                fa-brands
+                fa-whatsapp
+                text-xl
+              "
+            ></i>
+
+            ابدأ عبر واتساب
+
+          </button>
+
+
+          <a
+            id="heroCallBtn"
+            href="#"
+            aria-label="اتصال"
+            class="
+              mobile-action
+              glass
+              w-14
+              sm:w-auto
+              sm:px-6
+              rounded-xl
+              font-bold
+              flex
+              items-center
+              justify-center
+              gap-2
+            "
+          >
+
+            <i
+              class="
+                fa-solid
+                fa-phone
+              "
+            ></i>
+
+            <span class="hidden sm:inline">
+              اتصال
+            </span>
+
+          </a>
+
         </div>
+
+
+        <a
+          href="#services"
+          class="
+            mt-3
+            inline-flex
+            items-center
+            justify-center
+            gap-2
+            text-xs
+            text-slate-300
+            py-1
+          "
+        >
+
+          تصفح جميع الخدمات
+
+          <i
+            class="
+              fa-solid
+              fa-chevron-down
+              text-[9px]
+            "
+          ></i>
+
+        </a>
+
+
+        <!-- QUICK SERVICES -->
+        <div
+          class="
+            flex
+            overflow-x-auto
+            gap-2
+            mt-5
+            pb-1
+            justify-start
+            sm:justify-center
+            lg:justify-start
+            [scrollbar-width:none]
+            [&::-webkit-scrollbar]:hidden
+          "
+        >
+
+          <button
+            onclick="orderService('تجديد الإقامة')"
+            class="
+              glass
+              rounded-full
+              px-3
+              py-2
+              text-xs
+              whitespace-nowrap
+            "
+          >
+            تجديد إقامة
+          </button>
+
+          <button
+            onclick="orderService('نقل خدمات العمالة')"
+            class="
+              glass
+              rounded-full
+              px-3
+              py-2
+              text-xs
+              whitespace-nowrap
+            "
+          >
+            نقل خدمات
+          </button>
+
+          <button
+            onclick="orderService('خدمات منصة قوى')"
+            class="
+              glass
+              rounded-full
+              px-3
+              py-2
+              text-xs
+              whitespace-nowrap
+            "
+          >
+            منصة قوى
+          </button>
+
+          <button
+            onclick="orderService('التأشيرات')"
+            class="
+              glass
+              rounded-full
+              px-3
+              py-2
+              text-xs
+              whitespace-nowrap
+            "
+          >
+            التأشيرات
+          </button>
+
+        </div>
+
       </div>
-      <div class="card rounded-[2rem] p-7 text-slate-800 hidden lg:block">
-        <div class="flex items-center justify-between mb-5"><div><p class="text-xs text-slate-400">رحلة الطلب</p><h2 class="font-black text-xl">ثلاث خطوات واضحة</h2></div><i class="fa-solid fa-file-circle-check text-3xl text-sky"></i></div>
+
+
+      <!-- DESKTOP FLOW -->
+      <div
+        class="
+          card
+          rounded-[2rem]
+          p-7
+          text-slate-800
+          hidden
+          lg:block
+        "
+      >
+
+        <div
+          class="
+            flex
+            items-center
+            justify-between
+            mb-5
+          "
+        >
+
+          <div>
+
+            <p
+              class="
+                text-xs
+                text-slate-400
+              "
+            >
+              رحلة الطلب
+            </p>
+
+            <h2
+              class="
+                font-black
+                text-xl
+              "
+            >
+              ثلاث خطوات واضحة
+            </h2>
+
+          </div>
+
+          <i
+            class="
+              fa-solid
+              fa-file-circle-check
+              text-3xl
+              text-sky
+            "
+          ></i>
+
+        </div>
+
         <div class="space-y-3">
-          <div class="bg-slate-50 rounded-xl p-4 flex gap-3"><b class="text-sky">١</b><div><b>اختر الخدمة</b><p class="text-xs text-slate-500">حدد الخدمة أو اكتب طلباً خاصاً.</p></div></div>
-          <div class="bg-slate-50 rounded-xl p-4 flex gap-3"><b class="text-sky">٢</b><div><b>اعرف التفاصيل</b><p class="text-xs text-slate-500">توضيح المتطلبات والرسوم والمدة.</p></div></div>
-          <div class="bg-green-50 rounded-xl p-4 flex gap-3"><i class="fa-solid fa-check text-green-600"></i><div><b>تابع الإنجاز</b><p class="text-xs text-slate-500">تحديثات مباشرة حتى اكتمال الإجراء.</p></div></div>
+
+          <div
+            class="
+              bg-slate-50
+              rounded-xl
+              p-4
+              flex
+              gap-3
+            "
+          >
+
+            <b class="text-sky">
+              ١
+            </b>
+
+            <div>
+
+              <b>
+                اختر الخدمة
+              </b>
+
+              <p
+                class="
+                  text-xs
+                  text-slate-500
+                "
+              >
+                حدد الخدمة أو اكتب طلباً خاصاً.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div
+            class="
+              bg-slate-50
+              rounded-xl
+              p-4
+              flex
+              gap-3
+            "
+          >
+
+            <b class="text-sky">
+              ٢
+            </b>
+
+            <div>
+
+              <b>
+                اعرف التفاصيل
+              </b>
+
+              <p
+                class="
+                  text-xs
+                  text-slate-500
+                "
+              >
+                توضيح المتطلبات والرسوم والمدة.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div
+            class="
+              bg-green-50
+              rounded-xl
+              p-4
+              flex
+              gap-3
+            "
+          >
+
+            <i
+              class="
+                fa-solid
+                fa-check
+                text-green-600
+              "
+            ></i>
+
+            <div>
+
+              <b>
+                تابع الإنجاز
+              </b>
+
+              <p
+                class="
+                  text-xs
+                  text-slate-500
+                "
+              >
+                متابعة واضحة حتى اكتمال الإجراء.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
     </div>
   </header>
 
-  <section class="max-w-5xl mx-auto px-4 -mt-8 relative z-10">
-    <div class="card rounded-2xl grid grid-cols-3 text-center p-4">
-      <div><i class="fa-solid fa-lock text-sky"></i><p class="font-bold text-xs mt-2">خصوصية</p></div>
-      <div class="border-x"><i class="fa-solid fa-receipt text-sky"></i><p class="font-bold text-xs mt-2">وضوح التكلفة</p></div>
-      <div><i class="fa-solid fa-comments text-sky"></i><p class="font-bold text-xs mt-2">متابعة مباشرة</p></div>
+
+  <!-- TRUST STRIP -->
+  <section
+    class="
+      max-w-5xl
+      mx-auto
+      px-4
+      -mt-7
+      relative
+      z-10
+    "
+  >
+
+    <div
+      class="
+        card
+        rounded-2xl
+        grid
+        grid-cols-3
+        text-center
+        py-3.5
+        px-2
+      "
+    >
+
+      <div class="px-1">
+
+        <i
+          class="
+            fa-solid
+            fa-lock
+            text-sky
+          "
+        ></i>
+
+        <p
+          class="
+            font-bold
+            text-[11px]
+            sm:text-xs
+            mt-1.5
+          "
+        >
+          خصوصية
+        </p>
+
+      </div>
+
+      <div
+        class="
+          border-x
+          border-slate-200
+          px-1
+        "
+      >
+
+        <i
+          class="
+            fa-solid
+            fa-receipt
+            text-sky
+          "
+        ></i>
+
+        <p
+          class="
+            font-bold
+            text-[11px]
+            sm:text-xs
+            mt-1.5
+          "
+        >
+          تكلفة واضحة
+        </p>
+
+      </div>
+
+      <div class="px-1">
+
+        <i
+          class="
+            fa-solid
+            fa-comments
+            text-sky
+          "
+        ></i>
+
+        <p
+          class="
+            font-bold
+            text-[11px]
+            sm:text-xs
+            mt-1.5
+          "
+        >
+          متابعة
+        </p>
+
+      </div>
+
     </div>
+
   </section>
 
+
   <main>
-    <section id="services" class="py-16 px-4 max-w-6xl mx-auto">
-      <div class="text-center mb-8 reveal"><span class="text-sky font-bold text-sm">الخدمات</span><h2 class="text-3xl font-black text-navy mt-2">اختر خدمتك</h2><p class="text-slate-500 text-sm mt-2">كل زر يجهز رسالة واتساب باسم الخدمة تلقائياً، والقائمة جاهزة للتوسع مع إضافة خدمات جديدة.</p></div>
-      <div class="max-w-xl mx-auto mb-6 flex gap-2">
-        <div class="relative flex-1"><i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-slate-400"></i><input id="search" oninput="filterCards()" class="w-full bg-white border border-slate-200 rounded-xl py-3 pr-11 pl-4" placeholder="ابحث: إقامة، قوى، تأشيرة..."></div>
-        <select id="category" onchange="filterCards()" class="bg-white border border-slate-200 rounded-xl px-3"><option value="all">الكل</option><option value="individual">أفراد</option><option value="business">أعمال</option></select>
+
+    <!-- SERVICES -->
+    <section
+      id="services"
+      class="
+        py-12
+        md:py-16
+        px-4
+        max-w-6xl
+        mx-auto
+      "
+    >
+
+      <div
+        class="
+          text-center
+          mb-6
+          reveal
+        "
+      >
+
+        <span
+          class="
+            text-sky
+            font-black
+            text-xs
+          "
+        >
+          الخدمات الرقمية
+        </span>
+
+        <h2
+          class="
+            text-2xl
+            md:text-3xl
+            font-black
+            text-navy
+            mt-1.5
+          "
+        >
+          كيف نقدر نخدمك؟
+        </h2>
+
+        <p
+          class="
+            text-slate-500
+            text-xs
+            sm:text-sm
+            mt-2
+          "
+        >
+          اختر الخدمة، وسيتم تجهيز رسالة الطلب تلقائياً.
+        </p>
+
       </div>
-      <div id="grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <article class="service-card card rounded-2xl p-6 flex flex-col" data-cat="individual" data-name="نقل خدمات العمالة كفالة"><i class="fa-solid fa-id-card text-2xl text-blue-600 bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center"></i><h3 class="font-black text-lg mt-4">نقل خدمات العمالة</h3><p class="text-sm text-slate-500 leading-7 mt-2 flex-1">مساعدة في الإجراءات والمتطلبات ومتابعة حالة الطلب.</p><button onclick="orderService('نقل خدمات العمالة')" class="mt-4 bg-navy text-white py-2.5 rounded-xl font-bold"><i class="fa-brands fa-whatsapp ml-1"></i>اطلب الخدمة</button></article>
-        <article class="service-card card rounded-2xl p-6 flex flex-col" data-cat="individual" data-name="تجديد الإقامة اقامات"><i class="fa-solid fa-passport text-2xl text-emerald-600 bg-emerald-100 w-12 h-12 rounded-xl flex items-center justify-center"></i><h3 class="font-black text-lg mt-4">خدمات الإقامة</h3><p class="text-sm text-slate-500 leading-7 mt-2 flex-1">استفسار ومتابعة خدمات التجديد والمتطلبات المرتبطة بها.</p><button onclick="orderService('خدمات الإقامة')" class="mt-4 bg-navy text-white py-2.5 rounded-xl font-bold"><i class="fa-brands fa-whatsapp ml-1"></i>اطلب الخدمة</button></article>
-        <article class="service-card card rounded-2xl p-6 flex flex-col" data-cat="individual" data-name="تأشيرات خروج عودة نهائي"><i class="fa-solid fa-plane-departure text-2xl text-amber-600 bg-amber-100 w-12 h-12 rounded-xl flex items-center justify-center"></i><h3 class="font-black text-lg mt-4">التأشيرات</h3><p class="text-sm text-slate-500 leading-7 mt-2 flex-1">خدمات الخروج والعودة والخروج النهائي وفق المتطلبات.</p><button onclick="orderService('التأشيرات')" class="mt-4 bg-navy text-white py-2.5 rounded-xl font-bold"><i class="fa-brands fa-whatsapp ml-1"></i>اطلب الخدمة</button></article>
-        <article class="service-card card rounded-2xl p-6 flex flex-col" data-cat="business" data-name="منصة قوى منشآت أعمال عقود"><i class="fa-solid fa-building-user text-2xl text-purple-600 bg-purple-100 w-12 h-12 rounded-xl flex items-center justify-center"></i><h3 class="font-black text-lg mt-4">منصة قوى</h3><p class="text-sm text-slate-500 leading-7 mt-2 flex-1">مساعدة أصحاب الأعمال في الخدمات المتاحة عبر المنصة.</p><button onclick="orderService('خدمات منصة قوى')" class="mt-4 bg-navy text-white py-2.5 rounded-xl font-bold"><i class="fa-brands fa-whatsapp ml-1"></i>اطلب الخدمة</button></article>
-        <article class="service-card card rounded-2xl p-6 flex flex-col" data-cat="individual" data-name="فواتير مخالفات استعلام سداد"><i class="fa-solid fa-file-invoice-dollar text-2xl text-red-600 bg-red-100 w-12 h-12 rounded-xl flex items-center justify-center"></i><h3 class="font-black text-lg mt-4">الفواتير والمخالفات</h3><p class="text-sm text-slate-500 leading-7 mt-2 flex-1">مساعدة في الاستعلام وخطوات السداد عبر القنوات الرسمية.</p><button onclick="orderService('الفواتير والمخالفات')" class="mt-4 bg-navy text-white py-2.5 rounded-xl font-bold"><i class="fa-brands fa-whatsapp ml-1"></i>اطلب الخدمة</button></article>
-        <article class="service-card card rounded-2xl p-6 flex flex-col" data-cat="all" data-name="خدمات إلكترونية طلب خاص"><i class="fa-solid fa-laptop-code text-2xl text-slate-700 bg-slate-100 w-12 h-12 rounded-xl flex items-center justify-center"></i><h3 class="font-black text-lg mt-4">خدمة أخرى</h3><p class="text-sm text-slate-500 leading-7 mt-2 flex-1">لم تجد خدمتك؟ أرسل نوع الطلب وسنوضح إمكانية التنفيذ.</p><button onclick="orderService('خدمة رقمية أخرى')" class="mt-4 bg-navy text-white py-2.5 rounded-xl font-bold"><i class="fa-brands fa-whatsapp ml-1"></i>اسأل عن الخدمة</button></article>
-      </div>
-      <div id="empty" class="hidden text-center py-8 text-slate-500">لم نجد خدمة مطابقة. استخدم نموذج الطلب الخاص أدناه.</div>
-      <div id="future-services" class="mt-8 rounded-2xl border border-dashed border-blue-300 bg-blue-50 p-6 reveal">
-        <div class="flex flex-col md:flex-row md:items-center gap-4 justify-between">
-          <div>
-            <span class="inline-flex items-center gap-2 text-sky font-black text-sm"><i class="fa-solid fa-layer-group"></i> خدمات قابلة للتوسعة</span>
-            <h3 class="text-xl font-black text-navy mt-2">ما لقيت خدمتك؟ اطلبها باسمها</h3>
-            <p class="text-sm text-slate-600 mt-2 leading-7">القائمة الحالية هي البداية، ويمكن إضافة خدمات جديدة لاحقاً مع بقاء طريقة الطلب بسيطة وواضحة.</p>
-          </div>
-          <button onclick="openCustomService()" class="shrink-0 bg-sky hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-black"><i class="fa-brands fa-whatsapp ml-2"></i>طلب خدمة غير مدرجة</button>
+
+
+      <!-- SEARCH -->
+      <div
+        class="
+          max-w-xl
+          mx-auto
+          mb-5
+          grid
+          grid-cols-[1fr_auto]
+          gap-2
+        "
+      >
+
+        <div class="relative">
+
+          <i
+            class="
+              fa-solid
+              fa-magnifying-glass
+              absolute
+              right-4
+              top-1/2
+              -translate-y-1/2
+              text-slate-400
+              text-sm
+            "
+          ></i>
+
+          <input
+            id="search"
+            oninput="filterCards()"
+            autocomplete="off"
+            class="
+              w-full
+              bg-white
+              border
+              border-slate-200
+              shadow-sm
+              rounded-xl
+              py-3.5
+              pr-11
+              pl-3
+              text-sm
+            "
+            placeholder="ابحث عن خدمة..."
+          >
+
         </div>
+
+        <select
+          id="category"
+          onchange="filterCards()"
+          aria-label="نوع الخدمة"
+          class="
+            bg-white
+            border
+            border-slate-200
+            shadow-sm
+            rounded-xl
+            px-2
+            text-xs
+            sm:text-sm
+          "
+        >
+
+          <option value="all">
+            الكل
+          </option>
+
+          <option value="individual">
+            أفراد
+          </option>
+
+          <option value="business">
+            أعمال
+          </option>
+
+        </select>
+
       </div>
+
+
+      <!-- GRID -->
+      <div
+        id="grid"
+        class="
+          grid
+          md:grid-cols-2
+          lg:grid-cols-3
+          gap-3
+          md:gap-5
+        "
+      >
+
+        <!-- SERVICE 1 -->
+        <article
+          class="
+            service-card
+            card
+            rounded-2xl
+            p-6
+            flex
+            flex-col
+          "
+          data-cat="individual"
+          data-name="نقل خدمات العمالة كفالة"
+        >
+
+          <div class="mobile-service-layout">
+
+            <i
+              class="
+                service-icon
+                fa-solid
+                fa-id-card
+                text-xl
+                text-blue-600
+                bg-blue-100
+                rounded-xl
+                flex
+                items-center
+                justify-center
+              "
+            ></i>
+
+            <div class="flex-1 min-w-0">
+
+              <h3
+                class="
+                  font-black
+                  text-lg
+                  mt-4
+                "
+              >
+                نقل خدمات العمالة
+              </h3>
+
+              <p
+                class="
+                  text-xs
+                  sm:text-sm
+                  text-slate-500
+                  leading-7
+                  mt-1.5
+                "
+              >
+                مساعدة في الإجراءات والمتطلبات ومتابعة حالة الطلب.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button
+            onclick="orderService('نقل خدمات العمالة')"
+            class="
+              mobile-action
+              mt-4
+              bg-navy
+              hover:bg-slate-800
+              text-white
+              py-2.5
+              rounded-xl
+              font-black
+              text-sm
+            "
+          >
+
+            <i
+              class="
+                fa-brands
+                fa-whatsapp
+                ml-1
+                text-green-400
+              "
+            ></i>
+
+            اطلب الخدمة
+
+          </button>
+
+        </article>
+
+
+        <!-- SERVICE 2 -->
+        <article
+          class="
+            service-card
+            card
+            rounded-2xl
+            p-6
+            flex
+            flex-col
+          "
+          data-cat="individual"
+          data-name="تجديد الإقامة اقامات"
+        >
+
+          <div class="mobile-service-layout">
+
+            <i
+              class="
+                service-icon
+                fa-solid
+                fa-passport
+                text-xl
+                text-emerald-600
+                bg-emerald-100
+                rounded-xl
+                flex
+                items-center
+                justify-center
+              "
+            ></i>
+
+            <div class="flex-1">
+
+              <h3
+                class="
+                  font-black
+                  text-lg
+                  mt-4
+                "
+              >
+                خدمات الإقامة
+              </h3>
+
+              <p
+                class="
+                  text-xs
+                  sm:text-sm
+                  text-slate-500
+                  leading-7
+                  mt-1.5
+                "
+              >
+                استفسار ومتابعة خدمات التجديد والمتطلبات المرتبطة بها.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button
+            onclick="orderService('خدمات الإقامة')"
+            class="
+              mobile-action
+              mt-4
+              bg-navy
+              text-white
+              py-2.5
+              rounded-xl
+              font-black
+              text-sm
+            "
+          >
+            <i class="fa-brands fa-whatsapp ml-1 text-green-400"></i>
+            اطلب الخدمة
+          </button>
+
+        </article>
+
+
+        <!-- SERVICE 3 -->
+        <article
+          class="
+            service-card
+            card
+            rounded-2xl
+            p-6
+            flex
+            flex-col
+          "
+          data-cat="individual"
+          data-name="تأشيرات خروج عودة نهائي"
+        >
+
+          <div class="mobile-service-layout">
+
+            <i
+              class="
+                service-icon
+                fa-solid
+                fa-plane-departure
+                text-xl
+                text-amber-600
+                bg-amber-100
+                rounded-xl
+                flex
+                items-center
+                justify-center
+              "
+            ></i>
+
+            <div class="flex-1">
+
+              <h3 class="font-black text-lg mt-4">
+                التأشيرات
+              </h3>
+
+              <p class="text-xs sm:text-sm text-slate-500 leading-7 mt-1.5">
+                خدمات الخروج والعودة والخروج النهائي وفق المتطلبات.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button
+            onclick="orderService('التأشيرات')"
+            class="
+              mobile-action
+              mt-4
+              bg-navy
+              text-white
+              py-2.5
+              rounded-xl
+              font-black
+              text-sm
+            "
+          >
+            <i class="fa-brands fa-whatsapp ml-1 text-green-400"></i>
+            اطلب الخدمة
+          </button>
+
+        </article>
+
+
+        <!-- SERVICE 4 -->
+        <article
+          class="
+            service-card
+            card
+            rounded-2xl
+            p-6
+            flex
+            flex-col
+          "
+          data-cat="business"
+          data-name="منصة قوى منشآت أعمال عقود"
+        >
+
+          <div class="mobile-service-layout">
+
+            <i
+              class="
+                service-icon
+                fa-solid
+                fa-building-user
+                text-xl
+                text-purple-600
+                bg-purple-100
+                rounded-xl
+                flex
+                items-center
+                justify-center
+              "
+            ></i>
+
+            <div class="flex-1">
+
+              <h3 class="font-black text-lg mt-4">
+                منصة قوى
+              </h3>
+
+              <p class="text-xs sm:text-sm text-slate-500 leading-7 mt-1.5">
+                مساعدة أصحاب الأعمال في الخدمات المتاحة عبر المنصة.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button
+            onclick="orderService('خدمات منصة قوى')"
+            class="
+              mobile-action
+              mt-4
+              bg-navy
+              text-white
+              py-2.5
+              rounded-xl
+              font-black
+              text-sm
+            "
+          >
+            <i class="fa-brands fa-whatsapp ml-1 text-green-400"></i>
+            اطلب الخدمة
+          </button>
+
+        </article>
+
+
+        <!-- SERVICE 5 -->
+        <article
+          class="
+            service-card
+            card
+            rounded-2xl
+            p-6
+            flex
+            flex-col
+          "
+          data-cat="individual"
+          data-name="فواتير مخالفات استعلام سداد"
+        >
+
+          <div class="mobile-service-layout">
+
+            <i
+              class="
+                service-icon
+                fa-solid
+                fa-file-invoice-dollar
+                text-xl
+                text-red-600
+                bg-red-100
+                rounded-xl
+                flex
+                items-center
+                justify-center
+              "
+            ></i>
+
+            <div class="flex-1">
+
+              <h3 class="font-black text-lg mt-4">
+                الفواتير والمخالفات
+              </h3>
+
+              <p class="text-xs sm:text-sm text-slate-500 leading-7 mt-1.5">
+                مساعدة في الاستعلام وخطوات السداد عبر القنوات الرسمية.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button
+            onclick="orderService('الفواتير والمخالفات')"
+            class="
+              mobile-action
+              mt-4
+              bg-navy
+              text-white
+              py-2.5
+              rounded-xl
+              font-black
+              text-sm
+            "
+          >
+            <i class="fa-brands fa-whatsapp ml-1 text-green-400"></i>
+            اطلب الخدمة
+          </button>
+
+        </article>
+
+
+        <!-- SERVICE 6 -->
+        <article
+          class="
+            service-card
+            card
+            rounded-2xl
+            p-6
+            flex
+            flex-col
+          "
+          data-cat="all"
+          data-name="خدمات إلكترونية طلب خاص"
+        >
+
+          <div class="mobile-service-layout">
+
+            <i
+              class="
+                service-icon
+                fa-solid
+                fa-laptop-code
+                text-xl
+                text-slate-700
+                bg-slate-100
+                rounded-xl
+                flex
+                items-center
+                justify-center
+              "
+            ></i>
+
+            <div class="flex-1">
+
+              <h3 class="font-black text-lg mt-4">
+                خدمة أخرى
+              </h3>
+
+              <p class="text-xs sm:text-sm text-slate-500 leading-7 mt-1.5">
+                لم تجد خدمتك؟ أرسل اسم الطلب وسنوضح إمكانية التنفيذ.
+              </p>
+
+            </div>
+
+          </div>
+
+          <button
+            onclick="openCustomService()"
+            class="
+              mobile-action
+              mt-4
+              bg-sky
+              text-white
+              py-2.5
+              rounded-xl
+              font-black
+              text-sm
+            "
+          >
+            <i class="fa-brands fa-whatsapp ml-1"></i>
+            اسأل عن الخدمة
+          </button>
+
+        </article>
+
+      </div>
+
+
+      <div
+        id="empty"
+        class="
+          hidden
+          card
+          rounded-xl
+          text-center
+          py-7
+          px-4
+          text-slate-500
+          text-sm
+          mt-3
+        "
+      >
+
+        <i
+          class="
+            fa-solid
+            fa-magnifying-glass
+            text-2xl
+            text-slate-300
+            mb-2
+          "
+        ></i>
+
+        <p>
+          لم نجد خدمة مطابقة.
+        </p>
+
+        <button
+          onclick="openCustomService()"
+          class="
+            text-sky
+            font-black
+            mt-2
+          "
+        >
+          اسأل عن خدمتك
+        </button>
+
+      </div>
+
     </section>
 
-    <section class="bg-slate-100 py-16 px-4">
-      <div class="max-w-3xl mx-auto card rounded-[2rem] p-6 md:p-9 reveal">
-        <div class="mb-6"><span class="text-sky font-bold text-sm">طلب ذكي</span><h2 class="text-2xl font-black text-navy">جهّز رسالتك خلال نصف دقيقة</h2><p class="text-sm text-slate-500 mt-2">لا يُحفظ شيء في الموقع، تُفتح التفاصيل مباشرة في واتساب.</p></div>
-        <form onsubmit="sendForm(event)" class="space-y-3">
-          <div class="grid sm:grid-cols-2 gap-3"><input id="name" class="border rounded-xl px-4 py-3" placeholder="الاسم (اختياري)"><select id="type" class="border rounded-xl px-4 py-3"><option>استفسار عن خدمة</option><option>طلب إنجاز معاملة</option><option>متابعة طلب</option></select></div>
-          <textarea id="details" required rows="3" class="w-full border rounded-xl px-4 py-3" placeholder="اكتب الخدمة المطلوبة دون إرسال كلمات مرور أو رموز تحقق"></textarea>
-          <button class="w-full bg-wa hover:bg-green-600 text-white font-black py-3.5 rounded-xl"><i class="fa-brands fa-whatsapp ml-2"></i>إرسال الطلب عبر واتساب</button>
+
+    <!-- HOW IT WORKS MOBILE -->
+    <section
+      class="
+        px-4
+        pb-12
+        max-w-3xl
+        mx-auto
+        md:hidden
+      "
+    >
+
+      <div
+        class="
+          card
+          rounded-2xl
+          p-5
+          reveal
+        "
+      >
+
+        <p
+          class="
+            text-sky
+            font-black
+            text-xs
+          "
+        >
+          كيف يعمل الطلب؟
+        </p>
+
+        <div class="mt-4 space-y-3">
+
+          <div class="flex gap-3 items-center">
+
+            <div
+              class="
+                w-9
+                h-9
+                rounded-full
+                bg-blue-50
+                text-sky
+                font-black
+                flex
+                items-center
+                justify-center
+              "
+            >
+              ١
+            </div>
+
+            <div>
+              <b class="text-sm">
+                اختر الخدمة
+              </b>
+
+              <p class="text-xs text-slate-500">
+                من القائمة أو البحث.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex gap-3 items-center">
+
+            <div
+              class="
+                w-9
+                h-9
+                rounded-full
+                bg-blue-50
+                text-sky
+                font-black
+                flex
+                items-center
+                justify-center
+              "
+            >
+              ٢
+            </div>
+
+            <div>
+              <b class="text-sm">
+                أرسل الطلب
+              </b>
+
+              <p class="text-xs text-slate-500">
+                الرسالة تفتح جاهزة في واتساب.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="flex gap-3 items-center">
+
+            <div
+              class="
+                w-9
+                h-9
+                rounded-full
+                bg-green-50
+                text-green-600
+                font-black
+                flex
+                items-center
+                justify-center
+              "
+            >
+              ✓
+            </div>
+
+            <div>
+              <b class="text-sm">
+                اعرف التفاصيل
+              </b>
+
+              <p class="text-xs text-slate-500">
+                المتطلبات والتكلفة والمدة قبل البدء.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SMART REQUEST -->
+    <section
+      id="request"
+      class="
+        bg-slate-100
+        py-12
+        md:py-16
+        px-4
+      "
+    >
+
+      <div
+        class="
+          max-w-3xl
+          mx-auto
+          card
+          rounded-2xl
+          md:rounded-[2rem]
+          p-5
+          md:p-9
+          reveal
+        "
+      >
+
+        <div class="mb-5">
+
+          <span
+            class="
+              text-sky
+              font-black
+              text-xs
+            "
+          >
+            طلب سريع
+          </span>
+
+          <h2
+            class="
+              text-xl
+              md:text-2xl
+              font-black
+              text-navy
+              mt-1
+            "
+          >
+            جهّز رسالتك خلال نصف دقيقة
+          </h2>
+
+          <p
+            class="
+              text-xs
+              sm:text-sm
+              text-slate-500
+              mt-2
+              leading-6
+            "
+          >
+            البيانات المكتوبة هنا تُستخدم فقط لتجهيز رسالة واتساب.
+            لا ترسل كلمة مرور أو رمز تحقق.
+          </p>
+
+        </div>
+
+        <form
+          onsubmit="sendForm(event)"
+          class="space-y-3"
+        >
+
+          <input
+            id="name"
+            autocomplete="name"
+            class="
+              w-full
+              border
+              border-slate-200
+              rounded-xl
+              px-4
+              py-3.5
+              bg-white
+              text-sm
+            "
+            placeholder="الاسم (اختياري)"
+          >
+
+          <select
+            id="type"
+            class="
+              w-full
+              border
+              border-slate-200
+              rounded-xl
+              px-4
+              py-3.5
+              bg-white
+              text-sm
+            "
+          >
+
+            <option>
+              استفسار عن خدمة
+            </option>
+
+            <option>
+              طلب إنجاز معاملة
+            </option>
+
+            <option>
+              متابعة طلب
+            </option>
+
+          </select>
+
+          <textarea
+            id="details"
+            required
+            rows="3"
+            class="
+              w-full
+              border
+              border-slate-200
+              rounded-xl
+              px-4
+              py-3.5
+              bg-white
+              text-sm
+              resize-none
+            "
+            placeholder="اكتب الخدمة المطلوبة باختصار..."
+          ></textarea>
+
+          <button
+            class="
+              mobile-action
+              w-full
+              bg-wa
+              hover:bg-green-600
+              text-white
+              font-black
+              py-3.5
+              rounded-xl
+              shadow-sm
+            "
+          >
+
+            <i
+              class="
+                fa-brands
+                fa-whatsapp
+                ml-2
+                text-lg
+              "
+            ></i>
+
+            إرسال الطلب عبر واتساب
+
+          </button>
+
         </form>
+
       </div>
+
     </section>
 
-    <section class="py-16 px-4 max-w-3xl mx-auto">
-      <h2 class="text-2xl font-black text-navy text-center mb-6">أسئلة شائعة</h2>
-      <div class="space-y-3">
-        <details class="card rounded-xl p-4"><summary class="font-bold flex justify-between">كيف أبدأ؟ <i class="chev fa-solid fa-chevron-down text-slate-400"></i></summary><p class="text-sm text-slate-600 mt-3 leading-7">اختر الخدمة أو أرسل تفاصيل مختصرة عبر نموذج الطلب، ثم تُوضّح المتطلبات والرسوم قبل البدء.</p></details>
-        <details class="card rounded-xl p-4"><summary class="font-bold flex justify-between">هل أرسل كلمة المرور أو رمز التحقق؟ <i class="chev fa-solid fa-chevron-down text-slate-400"></i></summary><p class="text-sm text-slate-600 mt-3 leading-7">لا ترسل كلمات المرور أو رموز التحقق. استخدم القنوات الرسمية وأدخل البيانات الحساسة بنفسك.</p></details>
-        <details class="card rounded-xl p-4"><summary class="font-bold flex justify-between">كم تستغرق الخدمة؟ <i class="chev fa-solid fa-chevron-down text-slate-400"></i></summary><p class="text-sm text-slate-600 mt-3 leading-7">تختلف حسب نوع الطلب واكتمال المتطلبات والجهة المختصة، وتُوضّح المدة المتوقعة قبل البدء.</p></details>
+
+    <!-- FAQ -->
+    <section
+      class="
+        py-12
+        md:py-16
+        px-4
+        max-w-3xl
+        mx-auto
+      "
+    >
+
+      <div class="text-center mb-5">
+
+        <span
+          class="
+            text-sky
+            text-xs
+            font-black
+          "
+        >
+          قبل الطلب
+        </span>
+
+        <h2
+          class="
+            text-xl
+            md:text-2xl
+            font-black
+            text-navy
+            mt-1
+          "
+        >
+          أسئلة شائعة
+        </h2>
+
       </div>
+
+      <div class="space-y-2.5">
+
+        <details
+          class="
+            card
+            rounded-xl
+            p-4
+          "
+        >
+
+          <summary
+            class="
+              font-bold
+              text-sm
+              flex
+              justify-between
+              items-center
+              cursor-pointer
+            "
+          >
+
+            كيف أبدأ؟
+
+            <i
+              class="
+                chev
+                fa-solid
+                fa-chevron-down
+                text-slate-400
+                text-xs
+              "
+            ></i>
+
+          </summary>
+
+          <p
+            class="
+              text-xs
+              sm:text-sm
+              text-slate-600
+              mt-3
+              leading-7
+            "
+          >
+            اختر الخدمة أو أرسل تفاصيل مختصرة، ثم تُوضّح المتطلبات والرسوم قبل البدء.
+          </p>
+
+        </details>
+
+
+        <details
+          class="
+            card
+            rounded-xl
+            p-4
+          "
+        >
+
+          <summary
+            class="
+              font-bold
+              text-sm
+              flex
+              justify-between
+              items-center
+              cursor-pointer
+            "
+          >
+
+            هل أرسل كلمة المرور أو رمز التحقق؟
+
+            <i
+              class="
+                chev
+                fa-solid
+                fa-chevron-down
+                text-slate-400
+                text-xs
+              "
+            ></i>
+
+          </summary>
+
+          <p
+            class="
+              text-xs
+              sm:text-sm
+              text-slate-600
+              mt-3
+              leading-7
+            "
+          >
+            لا. لا ترسل كلمات المرور أو رموز التحقق، وأدخل البيانات الحساسة بنفسك عبر القنوات الرسمية.
+          </p>
+
+        </details>
+
+
+        <details
+          class="
+            card
+            rounded-xl
+            p-4
+          "
+        >
+
+          <summary
+            class="
+              font-bold
+              text-sm
+              flex
+              justify-between
+              items-center
+              cursor-pointer
+            "
+          >
+
+            كم تستغرق الخدمة؟
+
+            <i
+              class="
+                chev
+                fa-solid
+                fa-chevron-down
+                text-slate-400
+                text-xs
+              "
+            ></i>
+
+          </summary>
+
+          <p
+            class="
+              text-xs
+              sm:text-sm
+              text-slate-600
+              mt-3
+              leading-7
+            "
+          >
+            تختلف حسب نوع الطلب واكتمال المتطلبات والجهة المختصة، وتُوضّح المدة المتوقعة قبل البدء.
+          </p>
+
+        </details>
+
+      </div>
+
     </section>
+
   </main>
 
-  <footer class="bg-navy text-slate-400 py-8 px-4 text-center text-sm"><p>© <span id="year"></span> مكتب أبو محمد للخدمات الرقمية. جميع الحقوق محفوظة.</p><p class="text-xs mt-2">مكتب خدمات مستقل، وتخضع الإجراءات لأنظمة ومتطلبات الجهات المختصة.</p></footer>
 
-  <nav class="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur border-t z-50" style="padding-bottom:env(safe-area-inset-bottom)"><div class="grid grid-cols-3"><a id="callBtn" class="py-3 text-center text-navy" href="#"><i class="fa-solid fa-phone block"></i><span class="text-[10px] font-bold">اتصال</span></a><a href="#services" class="py-3 text-center text-navy"><i class="fa-solid fa-list block"></i><span class="text-[10px] font-bold">الخدمات</span></a><button onclick="openWA('مرحباً أبو محمد، أريد الاستفسار عن خدماتكم.')" class="py-3 text-center text-green-600"><i class="fa-brands fa-whatsapp block"></i><span class="text-[10px] font-bold">واتساب</span></button></div></nav>
+  <!-- FOOTER -->
+  <footer
+    class="
+      bg-navy
+      text-slate-400
+      py-8
+      px-4
+      text-center
+      text-xs
+      md:text-sm
+    "
+  >
+
+    <p>
+      ©
+      <span id="year"></span>
+      مكتب أبو محمد للخدمات الرقمية.
+      جميع الحقوق محفوظة.
+    </p>
+
+    <p
+      class="
+        text-[10px]
+        md:text-xs
+        mt-2
+        leading-5
+        max-w-2xl
+        mx-auto
+      "
+    >
+      مكتب خدمات مستقل، وتخضع الإجراءات لأنظمة ومتطلبات الجهات المختصة.
+    </p>
+
+  </footer>
+
+
+  <!-- MOBILE BOTTOM APP BAR -->
+  <nav
+    class="
+      fixed
+      bottom-0
+      inset-x-0
+      md:hidden
+      bg-white/95
+      backdrop-blur-xl
+      border-t
+      border-slate-200
+      z-50
+      safe-bottom
+      shadow-[0_-8px_25px_rgba(15,23,42,.08)]
+    "
+  >
+
+    <div
+      class="
+        grid
+        grid-cols-4
+        max-w-lg
+        mx-auto
+      "
+    >
+
+      <a
+        id="callBtn"
+        aria-label="اتصال"
+        class="
+          min-h-[64px]
+          flex
+          flex-col
+          justify-center
+          items-center
+          gap-1
+          text-navy
+        "
+        href="#"
+      >
+
+        <i
+          class="
+            fa-solid
+            fa-phone
+            text-base
+          "
+        ></i>
+
+        <span
+          class="
+            text-[10px]
+            font-black
+          "
+        >
+          اتصال
+        </span>
+
+      </a>
+
+
+      <a
+        href="#services"
+        class="
+          min-h-[64px]
+          flex
+          flex-col
+          justify-center
+          items-center
+          gap-1
+          text-navy
+        "
+      >
+
+        <i
+          class="
+            fa-solid
+            fa-border-all
+            text-base
+          "
+        ></i>
+
+        <span
+          class="
+            text-[10px]
+            font-black
+          "
+        >
+          الخدمات
+        </span>
+
+      </a>
+
+
+      <a
+        href="#request"
+        class="
+          min-h-[64px]
+          flex
+          flex-col
+          justify-center
+          items-center
+          gap-1
+          text-navy
+        "
+      >
+
+        <i
+          class="
+            fa-solid
+            fa-pen-to-square
+            text-base
+          "
+        ></i>
+
+        <span
+          class="
+            text-[10px]
+            font-black
+          "
+        >
+          طلب
+        </span>
+
+      </a>
+
+
+      <button
+        onclick="openWA('مرحباً أبو محمد، أريد الاستفسار عن خدماتكم.')"
+        class="
+          min-h-[64px]
+          flex
+          flex-col
+          justify-center
+          items-center
+          gap-1
+          text-green-600
+          bg-green-50/70
+        "
+      >
+
+        <i
+          class="
+            fa-brands
+            fa-whatsapp
+            text-xl
+          "
+        ></i>
+
+        <span
+          class="
+            text-[10px]
+            font-black
+          "
+        >
+          واتساب
+        </span>
+
+      </button>
+
+    </div>
+
+  </nav>
+
 
   <script>
-    const WA_NUMBER='966576725097';
-    const PHONE='+966576725097';
-    const WORK_START=9, WORK_END=23;
-    function openWA(message){window.location.href=`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`}
-    function orderService(service){openWA(`مرحباً أبو محمد، أرغب في طلب خدمة: ${service}. أرجو توضيح المتطلبات والرسوم والمدة المتوقعة.`)}
-    function openCustomService(){const service=prompt('اكتب اسم الخدمة التي تبحث عنها:');if(service&&service.trim()){orderService(service.trim())}}
-    function sendForm(e){e.preventDefault();const n=document.getElementById('name').value.trim();const t=document.getElementById('type').value;const d=document.getElementById('details').value.trim();const nameLine=n?`الاسم: ${n}\n`:'';openWA(`مرحباً أبو محمد، لدي ${t}.\n${nameLine}التفاصيل: ${d}`)}
-    function filterCards(){const q=document.getElementById('search').value.trim().toLowerCase();const c=document.getElementById('category').value;let visible=0;document.querySelectorAll('.service-card').forEach(x=>{const matchText=x.dataset.name.toLowerCase().includes(q);const matchCat=c==='all'||x.dataset.cat===c||x.dataset.cat==='all';x.style.display=matchText&&matchCat?'flex':'none';if(matchText&&matchCat)visible++});document.getElementById('empty').classList.toggle('hidden',visible>0)}
-    const h=new Date().getHours(), open=h>=WORK_START&&h<WORK_END;document.getElementById('statusText').textContent=open?'متاح الآن لاستقبال الطلبات':'خارج وقت الدوام، أرسل طلبك وسنراجعه لاحقاً';if(!open){document.getElementById('statusDot').style.background='#f59e0b';document.getElementById('statusDot').style.animation='none'}
-    document.getElementById('greeting').textContent=h<12?'صباح الخير ☀️':h<18?'حياك الله 👋':'مساء الخير 🌙';document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('callBtn').href='tel:'+PHONE;
-    const obs=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+
+    // ═══════════════════════════════════════════════════════
+    // CONTACT CONFIG
+    // الرقم يُكتب هنا فقط
+    // ═══════════════════════════════════════════════════════
+
+    const CONTACT = Object.freeze({
+      wa: '966577619578',
+      phone: '+966577619578'
+    });
+
+
+    const WORK_START = 9;
+    const WORK_END = 23;
+
+
+    // ═══════════════════════════════════════════════════════
+    // WHATSAPP
+    // ═══════════════════════════════════════════════════════
+
+    function openWA(message) {
+
+      const url =
+        `https://wa.me/${CONTACT.wa}`
+        +
+        `?text=${encodeURIComponent(message)}`;
+
+      window.location.href = url;
+    }
+
+
+    function orderService(service) {
+
+      openWA(
+        `مرحباً أبو محمد، أرغب في طلب خدمة: ${service}.\n`
+        +
+        `أرجو توضيح المتطلبات والرسوم والمدة المتوقعة.`
+      );
+    }
+
+
+    function openCustomService() {
+
+      const service = prompt(
+        'اكتب اسم الخدمة التي تبحث عنها:'
+      );
+
+      if (
+        service
+        &&
+        service.trim()
+      ) {
+
+        orderService(
+          service.trim()
+        );
+      }
+    }
+
+
+    // ═══════════════════════════════════════════════════════
+    // SMART FORM
+    // ═══════════════════════════════════════════════════════
+
+    function sendForm(event) {
+
+      event.preventDefault();
+
+      const name =
+        document
+        .getElementById('name')
+        .value
+        .trim();
+
+      const type =
+        document
+        .getElementById('type')
+        .value;
+
+      const details =
+        document
+        .getElementById('details')
+        .value
+        .trim();
+
+      if (!details) {
+        return;
+      }
+
+      const nameLine =
+        name
+        ?
+        `الاسم: ${name}\n`
+        :
+        '';
+
+      openWA(
+        `مرحباً أبو محمد، لدي ${type}.\n`
+        +
+        nameLine
+        +
+        `التفاصيل: ${details}`
+      );
+    }
+
+
+    // ═══════════════════════════════════════════════════════
+    // SEARCH / FILTER
+    // ═══════════════════════════════════════════════════════
+
+    function normalizeSearch(text) {
+
+      return String(
+        text || ''
+      )
+      .toLowerCase()
+      .replace(/[أإآ]/g, 'ا')
+      .replace(/ى/g, 'ي')
+      .replace(/ؤ/g, 'و')
+      .replace(/ئ/g, 'ي')
+      .replace(/ـ/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+    }
+
+
+    function filterCards() {
+
+      const query =
+        normalizeSearch(
+          document
+          .getElementById('search')
+          .value
+        );
+
+      const category =
+        document
+        .getElementById('category')
+        .value;
+
+      let visible = 0;
+
+      document
+      .querySelectorAll(
+        '.service-card'
+      )
+      .forEach(card => {
+
+        const name =
+          normalizeSearch(
+            card.dataset.name
+          );
+
+        const cardCategory =
+          card.dataset.cat;
+
+        const matchText =
+          !query
+          ||
+          name.includes(
+            query
+          );
+
+        const matchCategory =
+          category === 'all'
+          ||
+          cardCategory === category
+          ||
+          cardCategory === 'all';
+
+        const show =
+          matchText
+          &&
+          matchCategory;
+
+        card.style.display =
+          show
+          ?
+          'flex'
+          :
+          'none';
+
+        if (show) {
+          visible++;
+        }
+      });
+
+      document
+      .getElementById('empty')
+      .classList
+      .toggle(
+        'hidden',
+        visible > 0
+      );
+    }
+
+
+    // ═══════════════════════════════════════════════════════
+    // OFFICE HOURS
+    // ═══════════════════════════════════════════════════════
+
+    const hour =
+      new Date()
+      .getHours();
+
+    const isOpen =
+      hour >= WORK_START
+      &&
+      hour < WORK_END;
+
+    const statusText =
+      document
+      .getElementById(
+        'statusText'
+      );
+
+    const statusDot =
+      document
+      .getElementById(
+        'statusDot'
+      );
+
+
+    if (isOpen) {
+
+      statusText.textContent =
+        'متاح الآن لاستقبال الطلبات';
+
+    } else {
+
+      statusText.textContent =
+        'خارج وقت الدوام — أرسل طلبك وسنراجعه لاحقاً';
+
+      statusDot.style.background =
+        '#f59e0b';
+
+      statusDot.style.animation =
+        'none';
+    }
+
+
+    // ═══════════════════════════════════════════════════════
+    // GREETING
+    // ═══════════════════════════════════════════════════════
+
+    const greeting =
+      document
+      .getElementById(
+        'greeting'
+      );
+
+    if (hour < 12) {
+
+      greeting.textContent =
+        'صباح الخير ☀️';
+
+    } else if (hour < 18) {
+
+      greeting.textContent =
+        'حياك الله 👋';
+
+    } else {
+
+      greeting.textContent =
+        'مساء الخير 🌙';
+    }
+
+
+    // ═══════════════════════════════════════════════════════
+    // CONTACT LINKS
+    // ═══════════════════════════════════════════════════════
+
+    document
+    .getElementById(
+      'callBtn'
+    )
+    .href =
+      'tel:'
+      +
+      CONTACT.phone;
+
+
+    document
+    .getElementById(
+      'heroCallBtn'
+    )
+    .href =
+      'tel:'
+      +
+      CONTACT.phone;
+
+
+    // ═══════════════════════════════════════════════════════
+    // YEAR
+    // ═══════════════════════════════════════════════════════
+
+    document
+    .getElementById(
+      'year'
+    )
+    .textContent =
+      new Date()
+      .getFullYear();
+
+
+    // ═══════════════════════════════════════════════════════
+    // REVEAL
+    // ═══════════════════════════════════════════════════════
+
+    if (
+      'IntersectionObserver'
+      in window
+    ) {
+
+      const observer =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(
+              entry => {
+
+                if (
+                  entry.isIntersecting
+                ) {
+
+                  entry
+                  .target
+                  .classList
+                  .add('show');
+
+                  observer.unobserve(
+                    entry.target
+                  );
+                }
+              }
+            );
+
+          },
+          {
+            threshold: .08
+          }
+        );
+
+
+      document
+      .querySelectorAll(
+        '.reveal'
+      )
+      .forEach(
+        item =>
+          observer.observe(
+            item
+          )
+      );
+
+    } else {
+
+      document
+      .querySelectorAll(
+        '.reveal'
+      )
+      .forEach(
+        item =>
+          item
+          .classList
+          .add('show')
+      );
+    }
+
   </script>
+
 </body>
 </html>
